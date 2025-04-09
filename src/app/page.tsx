@@ -1,3 +1,4 @@
+import Carroussel from "@/components/Carroussel";
 import Image from "next/image";
 
 
@@ -15,6 +16,7 @@ export default function Home() {
         <Image src='/images/green-balloons.png' width={400} height={500} alt={'Logo'} className="rounded-3xl" />
         {/* <TransitionImage /> */}
       </section>
+      <Carroussel />
     </main>
   );
 }
