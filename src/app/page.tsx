@@ -18,8 +18,16 @@ export default function Home() {
         </section>
       </div>
       <section className="mt-40 flex flex-col gap-20 ">
-        <h2 className="text-4xl font-bold text-center">Nos Créations</h2>
+        <h2 className="text-4xl font-bold text-center text-teal-600">Nos Créations</h2>
         <div className="h-80 border bg-gray-400 border-gray-300 rounded"></div>
+      </section>
+      <section className="mt-40 flex flex-col  gap-20 ">
+        <h2 className="text-center text-2xl font-bold">Creation pour vos différents évènements</h2>
+        <div className="flex justify-around">
+          <div className="h-60 w-40 border bg-gray-400 border-gray-300 rounded"></div>
+          <div className="h-60 w-40 border bg-gray-400 border-gray-300 rounded"></div>
+          <div className="h-60 w-40 border bg-gray-400 border-gray-300 rounded"></div>
+        </div>
       </section>
     </main>
   );

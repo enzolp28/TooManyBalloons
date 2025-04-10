@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image"
-import Link from "next/link"
+import ContactButton from "./ContactButton"
 
 type Props = {}
 
@@ -14,11 +14,7 @@ export default function Header({ }: Props) {
             <div className="flex items-center gap-15 mr-5 ">
                 <span className="font-semibold">Accueil</span>
                 <span className="font-semibold">Service</span>
-                <Link href={'/contact'}>
-                    <span className="bg-red-500 text-white py-1.5 rounded-3xl px-8 ml-5 font-bold">
-                        Contact
-                    </span>
-                </Link>
+                <ContactButton />
             </div>
         </header>
     )
