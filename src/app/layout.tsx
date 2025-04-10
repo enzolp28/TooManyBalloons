@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,8 +19,12 @@ export const metadata: Metadata = {
   description:
     "Too Many Balloons réalise des décorations en ballons uniques pour anniversaires, fêtes, événements d'entreprise et plus encore. Donnez une touche magique et festive à vos événements grâce à nos arches, colonnes et créations sur-mesure !",
   icons: {
-    icon: '/favicon-logo.ico',
-  },
+    icon: {
+      url: '/favicon3.ico',
+      type: 'image/x-icon'
+    }
+  }
+
 };
 
 export default function RootLayout({
@@ -30,10 +35,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
