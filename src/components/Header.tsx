@@ -14,7 +14,7 @@ export default function Header({ }: Props) {
             <div className="flex items-center gap-15 mr-5 ">
                 <span className="font-semibold">Accueil</span>
                 <span className="font-semibold">Service</span>
-                <ContactButton />
+                <ContactButton text={"Contact"} className={"py-1.5 px-8 ml-5"} />
             </div>
         </header>
     )
