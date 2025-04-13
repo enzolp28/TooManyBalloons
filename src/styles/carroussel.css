@@ -52,3 +52,27 @@
 .carroussel__button--right {
     right: 30px;
 }
+
+.carroussel__dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+.carroussel__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carroussel__dot.active {
+    background-color: rgba(255, 255, 255, 0.95);
+}

@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "@/styles/carroussel.css"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 
@@ -13,6 +13,7 @@ const images: string[] = [
 
 export default function Carroussel() {
     const [index, setIndex] = useState(0)
+    const [isPaused, setIsPaused] = useState(false)
 
     const nextSlide = () => {
         setIndex((prev) => (prev + 1) % images.length)
@@ -22,8 +23,22 @@ export default function Carroussel() {
         setIndex((prev) => (prev - 1 + images.length) % images.length)
     }
 
+    useEffect(() => {
+        if (isPaused) {
+            return
+        }
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % images.length)
+        }, 3000)
+        return () => clearInterval(interval);
+    }, [isPaused])
+
     return (
-        <div className="carroussel__container">
+        <div className="carroussel__container"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+
+        >
             <button className="carroussel__button--left" onClick={prevSlide}>
                 <FaChevronLeft />
             </button>
@@ -49,6 +64,16 @@ export default function Carroussel() {
             <button className="carroussel__button--right" onClick={nextSlide}>
                 <FaChevronRight />
             </button>
+            <div className="carroussel__dots">
+                {images.map((_, i) => (
+                    <button
+                        key={i}
+                        className={`carroussel__dot ${i === index ? 'active' : ''}`}
+                        onClick={() => setIndex(i)}
+                        aria-label={`Go to slide ${i + 1}`}
+                    />
+                ))}
+            </div>
         </div>
     )
 }
