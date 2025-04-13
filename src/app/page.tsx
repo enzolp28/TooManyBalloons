@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ContactButton from "@/components/ContactButton";
+import Carroussel from "@/components/Carroussel";
 
 
 
@@ -21,9 +22,9 @@ export default function Home() {
           {/* <TransitionImage /> */}
         </section>
       </div>
-      <section className="mt-40 flex flex-col gap-20 ">
+      <section className="mt-40 flex flex-col items-center gap-20 ">
         <h2 className="text-4xl font-bold text-center text-teal-600">Nos Créations</h2>
-        <div className="h-80 border bg-gray-400 border-gray-300 rounded"></div>
+        <Carroussel />
       </section>
       <section className="my-30 flex flex-col items-center gap-20 ">
         <h2 className="text-center text-2xl font-bold">Creation pour vos différents évènements</h2>
