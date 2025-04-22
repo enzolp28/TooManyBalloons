@@ -16,13 +16,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { nom, email, message } = req.body;
 
     await transporter.sendMail({
-        from: `"Formulaire Contact" <${process.env.EMAIL_USER}>`,
+        from: `"Formulaire de Contact" <${process.env.EMAIL_USER}>`,
         to: process.env.EMAIL_USER, // tu t'envoies le mail à toi-même
         subject: 'Nouveau message via le formulaire',
         text: `
-          Nom: ${nom}
-          Email: ${email}
-          Message: ${message}
+            Nom: ${nom}
+            Email: ${email}
+            Message: ${message}
         `,
     });
 
