@@ -33,7 +33,7 @@ export default function Home() {
           <div className="h-60 w-50 border bg-gray-300 border-gray-300 rounded-2xl"></div>
           <div className="h-60 w-50 border bg-gray-300 border-gray-300 rounded-2xl"></div>
         </div>
-        <ContactButton text="Contactez-nous" className={"py-3.5 px-12 "} />
+        <ContactButton text="Contactez-nous" className={"py-3.5 px-12 hover:bg-red-600 hover:scale-105 transition-transform duration-300 "} />
       </section>
     </main>
   );

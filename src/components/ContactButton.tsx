@@ -9,7 +9,7 @@ type Props = {
 export default function ContactButton({ text, className }: Props) {
     return (
         <Link href={'/contact'}>
-            <span className={`bg-red-500 text-white rounded-3xl font-bold ${className}`}>
+            <span className={`inline-block bg-red-500 text-white rounded-3xl font-bold ${className}`}>
                 {text}
             </span>
         </Link>

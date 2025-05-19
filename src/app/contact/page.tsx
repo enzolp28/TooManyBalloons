@@ -41,7 +41,8 @@ export default function page() {
 
                 <button
                     type="submit"
-                    className="bg-red-400 text-white px-6 py-2 rounded-xl hover:bg-red-600 transition cursor-pointer">Envoyer</button>
+                    className="bg-red-500 text-white px-6 py-2 rounded-xl hover:bg-red-600 transition cursor-pointer">Envoyer
+                </button>
             </form>
         </div>
     )
