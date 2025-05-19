@@ -27,7 +27,7 @@ export default function page() {
 
     }
     return (
-        <main className="p-20">
+        <div className="u-main-container u-padding-content-container">
             <h1 className="text-4xl font-bold">Formulaire de contact</h1>
             <form onSubmit={handleSubmit} action="" className=" flex flex-col gap-5 mt-10 w-1/2">
                 <label htmlFor="nom_prenom">Votre nom et prénom :</label>
@@ -43,6 +43,6 @@ export default function page() {
                     type="submit"
                     className="bg-red-400 text-white px-6 py-2 rounded-xl hover:bg-red-600 transition cursor-pointer">Envoyer</button>
             </form>
-        </main>
+        </div>
     )
 }
