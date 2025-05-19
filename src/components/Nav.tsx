@@ -18,7 +18,7 @@ export default function Nav({ }: Props) {
                     <Link href={'/'}>Accueil</Link>
                 </span>
                 <span className="font-semibold">
-                    <Link href={'/service'}>Service</Link>
+                    <Link href={'/service'}>Nos Services</Link>
                 </span>
                 <ContactButton text={"Contact"} className={"py-1.5 px-8 ml-5"} />
             </div>
